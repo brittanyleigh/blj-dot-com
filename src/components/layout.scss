@@ -152,8 +152,11 @@ p {
 
 .grid {
   display: grid;
-  grid-gap: 50px;
-  margin: 50px;
+
+  &--50 {
+    grid-gap: 50px;
+    margin: 50px;
+  }
 
   &--thirds {
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -221,7 +224,6 @@ p {
     color: $mainColor;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    height: calc(100% - 72px);
     bottom: 0;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -236,6 +238,9 @@ p {
     padding: 15px 10px;
     margin-top: auto;
     text-align: center;
+  }
+  &--bottom-auto {
+    margin-bottom: auto;
   }
 }
 
@@ -257,6 +262,10 @@ p {
   &:focus {
     cursor: pointer;
     background: darken($button-background, 10%);
+  }
+  svg {
+    font-size: 1rem;
+    vertical-align: bottom;
   }
 }
 
