@@ -1,13 +1,29 @@
 {
   "title": "Happy Friday!",
-  "content": [
+  "projects": [
     {
-      "heading": "Hipster Ipsum",
-      "body": "Bicycle rights echo park flannel humblebrag kitsch, squid chia kinfolk health goth blog vaporware. Ennui master cleanse chartreuse vice succulents beard biodiesel lomo venmo deep v. Migas small batch ugh try-hard, skateboard thundercats dreamcatcher chartreuse hella direct trade helvetica. "
+      "filename": "baseball-react.jpg",
+      "alt": "MLB baseball stats react app screenshot",
+      "heading": "MLB Team Stats App",
+      "description": "React & Redux web app for tracking your favorite MLB team's game details, standings, player stats, and recent news.",
+      "code": "https://github.com/brittanyleigh/baseball-react",
+      "live": "http://baseball.brittanyisenberg.com/"
     },
     {
-      "heading": "Doggo Ipsum!",
-      "body": "Doggo ipsum borkdrive much ruin diet you are doing me the shock the neighborhood pupper doggorino length boy many pats, boofers heckin shooberino wrinkler. Very good spot very jealous pupper very hand that feed shibe smol, shoob. Long bois pupper doggo you are doin me a concern big ol yapper, smol boof most angery pupper I have ever seen puggorino. Mlem blep wow very biscit dat tungg tho wow very biscit, thicc ur givin me a spook. Many pats heckin you are doing me the shock corgo ur givin me a spook very hand that feed shibe shooberino, big ol pupper doge pats borkdrive. Such treat what a nice floof super chub such treat, smol thicc. Puggorino very good spot most angery pupper I have ever seen you are doing me the shock big ol pupper porgo corgo shoober, heckin good boys lotsa pats noodle horse very taste wow thicc. What a nice floof long doggo blep length boy borking doggo, much ruin diet floofs borkf."
+      "filename": "habits.jpg",
+      "alt": "Django habits app screenshot",
+      "heading": "Essentials Habit Tracker",
+      "description": "Django web app for developing healthy, positive habits by tracking daily streaks for three personalized 'essentials'.",
+      "code": "https://github.com/brittanyleigh/habits",
+      "live": "http://brittanyleigh.pythonanywhere.com/"
+    },
+    {
+      "filename": "ryp.jpg",
+      "alt": "RYP WordPress website screenshot",
+      "heading": "Rochester Young Professionals",
+      "description": "Custom WordPress theme design and development for non-profit organization.",
+      "code": "https://github.com/brittanyleigh/ryp",
+      "live": "http://r-y-p.org/"
     }
   ]
 }

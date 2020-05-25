@@ -2,24 +2,44 @@
 label: homepage
 hide_body: false
 fields:
-- type: text
-  name: title
-  default: ''
-  label: Title
-  hidden: false
-- type: field_group_list
-  name: content
-  label: Content
-  fields:
   - type: text
-    name: heading
-    label: Heading
+    name: title
+    default: ""
+    label: Title
+    hidden: false
+  - type: field_group_list
+    name: projects
+    label: Projects
+    fields:
+      - type: text
+        name: filename
+        label: Filename
+        config:
+          required: true
+      - type: text
+        name: alt
+        label: Alt Text
+        config:
+          required: true
+      - type: text
+        name: heading
+        label: Heading
+        config:
+          required: true
+      - type: textarea
+        name: description
+        label: Description
+        config:
+          required: true
+      - type: text
+        name: code
+        label: Code
+        config:
+          required: true
+      - type: text
+        name: live
+        label: Live
+        config:
+          required: true
     config:
-      required: true
-  - type: textarea
-    name: body
-    label: Body
-    config:
-      required: true
-  config:
-    labelField: name
+      labelField: name

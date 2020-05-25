@@ -1,4 +1,3 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import {
@@ -9,21 +8,21 @@ import {
 } from "react-icons/fa"
 
 const Header = ({ siteTitle }) => (
-  <header role="banner" class="header">
-    <div class="title">
-      <h1 class="title__h1">Brittany Isenberg</h1>
-      <h4 class="title__sub">Web Developer & Designer</h4>
+  <header role="banner" className="header">
+    <div className="title">
+      <h1 className="title__h1">Brittany Isenberg</h1>
+      <h4 className="title__sub">Web Developer & Designer</h4>
     </div>
-    <nav class="links">
-      <Link class="links__a" to="#about" aria-label="About">
+    <nav className="links">
+      <a className="links__a" href="#about" aria-label="About">
         <FaUserCircle />
-      </Link>
-      <Link class="links__a" to="#contact" aria-label="Contact">
+      </a>
+      <a className="links__a" href="#contact" aria-label="Contact">
         <FaPaperPlane />
-      </Link>
+      </a>
       <a
-        class="links__a"
-        to="https://www.linkedin.com/in/brittanyisenberg/"
+        className="links__a"
+        href="https://www.linkedin.com/in/brittanyisenberg/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn Profile"
@@ -31,8 +30,8 @@ const Header = ({ siteTitle }) => (
         <FaLinkedinIn />
       </a>
       <a
-        class="links__a"
-        to="https://github.com/brittanyleigh"
+        className="links__a"
+        href="https://github.com/brittanyleigh"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub Profile"
