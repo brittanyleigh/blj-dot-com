@@ -32,6 +32,14 @@ _Have another more specific idea? You may want to check out our vibrant collecti
     gatsby develop
     ```
 
+1.  **Edit content using Forestry CMS.**
+
+    Run Gatsby build to access Forestry CMS locally.
+
+    ```shell
+    gatsby build && gatsby serve
+    ```
+
 1.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!

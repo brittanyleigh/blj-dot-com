@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,600");
+@import url("https://fonts.googleapis.com/css?family=Satisfy");
+
+$titleFont: "Satisfy", cursive;
+$mainFont: "Raleway", sans-serif;
+$light: #ffffff;
+$mainColor: #9398a2;
+$contrastColor: #353535;
+$bodyColor: #5d5d5d;
+$lightGray: #dedede;
+$background-top: #e8faff;
+$background-bottom: #c1d9f1;
+$button-background: darken($background-bottom, 20%);
+
+$breakpoint-xs: 400px;
+$breakpoint-sm: 575px;
+$breakpoint-md: 650px;
+$breakpoint-lg: 950px;
+
+body {
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 5px 0px;
+}
+a:-webkit-any-link {
+  text-decoration: none !important;
+}
+h1 {
+  font-family: $titleFont;
+  color: $contrastColor;
+  font-weight: 100;
+  font-size: 34px;
+}
+
+h2 {
+  text-align: center;
+  font-family: $titleFont;
+  letter-spacing: 1;
+  color: $contrastColor;
+  font-weight: 100;
+}
+
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: $mainFont;
+  font-weight: 600;
+}
+
+.container {
+  margin: 0px;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    180deg,
+    $background-top 0%,
+    $background-bottom 100%
+  );
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px 50px;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  @media screen and (max-width: $breakpoint-xs) {
+    padding: 15px;
+  }
+}
+
+.title {
+  &__sub {
+    letter-spacing: 1.2;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding-top: 3px;
+    font-weight: 600;
+    background: $light;
+    border: solid 1px $lightGray;
+    color: $button-background;
+    padding: 5px 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: bold;
+  }
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
+}
+
+.links {
+  font-size: 24px;
+  background: $light;
+  border: solid 1px $lightGray;
+  padding: 10px;
+  border-radius: 50px;
+
+  @media screen and (max-width: $breakpoint-sm) {
+    width: 100%;
+  }
+
+  &__a {
+    color: $button-background;
+    text-decoration: none;
+    margin: 0px 5px;
+    -webkit-transition: color 0.75s;
+    transition: color 0.75s;
+
+    &:hover,
+    &:focus {
+      color: darken($button-background, 10%);
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      font-size: 1.75em;
+    }
+  }
+  &__hr {
+    border: 0;
+    border-top: solid 1px $lightGray;
+    width: 50%;
+  }
+}
+
+.hidden {
+  &-large {
+    @media screen and (min-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-gap: 50px;
+  margin: 50px;
+
+  &--thirds {
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    @media screen and (max-width: 475px) {
+      margin: 15px;
+      grid-template-columns: 1fr;
+    }
+  }
+  &--halves {
+    margin: 15px 50px;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: $breakpoint-lg) {
+      grid-template-columns: 1fr;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      grid-gap: 15px;
+      margin: 15px;
+    }
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  &--column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+.project {
+  border: solid 1px $lightGray;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 25px 0px #afc6da;
+  box-shadow: 5px 5px 25px 0px #afc6da;
+  background: $light;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+
+  &__img {
+    width: 100%;
+    border-bottom: solid 1px $lightGray;
+  }
+  &__heading {
+    margin: 0px;
+    padding: 15px 10px;
+    text-align: center;
+    color: $contrastColor;
+    letter-spacing: 1.5;
+    font-family: "Satisfy", cursive;
+  }
+  &__description {
+    text-align: center;
+    margin: 0px;
+    padding: 5px 25px;
+    color: $mainColor;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    height: calc(100% - 72px);
+    bottom: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    font-weight: 400;
+    font-size: 14px;
+  }
+  &__buttons {
+    padding: 15px 10px;
+    margin-top: auto;
+    text-align: center;
+  }
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: $button-background;
+  color: $light;
+  font-family: $mainFont;
+  border-radius: 1000px;
+  font-size: 0.75em;
+  margin: 5px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border: 0px;
+  min-width: 100px;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    background: darken($button-background, 10%);
+  }
+}
+
+.secondary {
+  grid-gap: 50px;
+
+  &__heading {
+    letter-spacing: 1;
+    padding-bottom: 5px;
+    font-family: $titleFont;
+    position: relative;
+    margin: 50px 0px;
+
+    &:after {
+      content: "";
+      width: 100%;
+      border-bottom: solid 2px $button-background;
+      border-top: solid 2px $button-background;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      z-index: 1;
+      border-radius: 100px;
+    }
+  }
+
+  &__section {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+  }
+  &__p {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0px;
+    text-transform: uppercase;
+    color: $contrastColor;
+  }
+  &__i {
+    color: $button-background;
+  }
+  &__form {
+    text-align: center;
+  }
+  &__input {
+    padding: 5px;
+    margin-bottom: 10px;
+    border: solid 1px $lightGray;
+    font-family: "raleway";
+    font-size: 16px;
+    color: $mainColor;
+    border-radius: 1000px;
+
+    &--large {
+      width: 70.25%;
+      @media screen and (max-width: $breakpoint-md) {
+        width: calc(100% - 60px);
+      }
+      @media screen and (max-width: $breakpoint-xs) {
+        width: calc(100% - 30px);
+      }
+    }
+    &--small {
+      width: 35%;
+      @media screen and (max-width: $breakpoint-md) {
+        width: calc(50% - 32.5px);
+      }
+      @media screen and (max-width: $breakpoint-xs) {
+        width: calc(100% - 30px);
+      }
+    }
+  }
+  &__textarea {
+    border-radius: 15px;
+  }
+}
+
+.desk {
+  img {
+    width: 100%;
+  }
+  @media screen and (max-width: 450px) {
+    overflow: hidden;
+    img {
+      width: 1000px;
+    }
+  }
+}
