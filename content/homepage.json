@@ -4,7 +4,7 @@
     {
       "filename": "baseball-react.jpg",
       "alt": "Testing ",
-      "title": "MLB Team Stats App",
+      "title": "Testing",
       "description": "React & Redux web app for tracking your favorite MLB team's game details, standings, player stats, and recent news.",
       "code": "https://github.com/brittanyleigh/baseball-react",
       "live": "http://baseball.brittanyisenberg.com/"
