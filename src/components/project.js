@@ -10,7 +10,7 @@ const Project = props => (
       <Image filename={props.filename} alt={props.alt} />
     </div>
     <div className="project--bottom-auto">
-      <h3 className="project__heading">{props.heading}</h3>
+      <h3 className="project__heading">{props.title}</h3>
       <p className="project__description flex">{props.description}</p>
     </div>
     <div className="project__buttons">
@@ -37,7 +37,7 @@ const Project = props => (
 Project.propTypes = {
   filename: PropTypes.string.isRequired,
   alt: PropTypes.string.isRequired,
-  heading: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
   live: PropTypes.string.isRequired,

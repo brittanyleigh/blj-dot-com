@@ -14,7 +14,7 @@ const IndexPage = () => (
             key={item.filename}
             filename={item.filename}
             alt={item.alt}
-            heading={item.heading}
+            title={item.title}
             description={item.description}
             code={item.code}
             live={item.live}
