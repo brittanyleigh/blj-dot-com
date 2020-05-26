@@ -3,7 +3,7 @@
   "projects": [
     {
       "filename": "baseball-react.jpg",
-      "alt": "MLB baseball stats react app screenshot",
+      "alt": "Testing ",
       "title": "MLB Team Stats App",
       "description": "React & Redux web app for tracking your favorite MLB team's game details, standings, player stats, and recent news.",
       "code": "https://github.com/brittanyleigh/baseball-react",
