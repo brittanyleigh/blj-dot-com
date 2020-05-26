@@ -1,0 +1,14 @@
+{
+  "title": "Homepage",
+  "projects": [
+    {
+      "image": "/static/media/baseball-react.jpg",
+      "filename": "baseball-react.jpg",
+      "alt": "baseball",
+      "title": "Baseball",
+      "description": "description",
+      "code": "www.google.com",
+      "live": "www.google.com"
+    }
+  ]
+}
