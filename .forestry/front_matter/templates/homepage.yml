@@ -45,3 +45,5 @@ fields:
       required: true
   config:
     labelField: label
+pages:
+- content/homepage.json

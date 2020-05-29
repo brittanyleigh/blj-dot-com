@@ -1,0 +1,13 @@
+{
+  "title": "Homepage",
+  "projects": [
+    {
+      "image": "/static/media/baseball-react.jpg",
+      "alt": "baseball react app",
+      "title": "Baseball Stats App",
+      "description": "React & Redux web app for tracking your favorite MLB team's game details, standings, player stats, and recent news.",
+      "code": "https://github.com/brittanyleigh/baseball-react",
+      "live": "http://baseball.brittanyisenberg.com/"
+    }
+  ]
+}
