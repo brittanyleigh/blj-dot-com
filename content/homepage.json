@@ -2,6 +2,14 @@
   "title": "Homepage",
   "projects": [
     {
+      "image": "/habits.jpg",
+      "alt": "django habits app screenshot",
+      "title": "Essentials Habit Tracker",
+      "description": "Django web app for developing healthy, positive habits by tracking daily streaks for three personalized 'essentials'.",
+      "code": "https://github.com/brittanyleigh/habits",
+      "live": "http://brittanyleigh.pythonanywhere.com/"
+    },
+    {
       "image": "/baseball-react.jpg",
       "alt": "baseball react app",
       "title": "Baseball Stats App",
