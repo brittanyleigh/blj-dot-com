@@ -44,6 +44,6 @@ fields:
     config:
       required: true
   config:
-    labelField: label
+    labelField: title
 pages:
 - content/homepage.json
