@@ -2,7 +2,7 @@
   "title": "Homepage",
   "projects": [
     {
-      "image": "/static/media/baseball-react.jpg",
+      "image": "",
       "alt": "Testing ",
       "title": "Testing",
       "description": "React & Redux web app for tracking your favorite MLB team's game details, standings, player stats, and recent news.",
