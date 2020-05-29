@@ -2,12 +2,12 @@
   "title": "Homepage",
   "projects": [
     {
-      "image": "/habits.jpg",
-      "alt": "django habits app screenshot",
-      "title": "Essentials Habit Tracker",
-      "description": "Django web app for developing healthy, positive habits by tracking daily streaks for three personalized 'essentials'.",
-      "code": "https://github.com/brittanyleigh/habits",
-      "live": "http://brittanyleigh.pythonanywhere.com/"
+      "image": "/ryp.jpg",
+      "alt": "RYP website screenshot",
+      "title": "Rochester Young Professionals",
+      "description": "Custom WordPress theme design and development for non-profit organization.",
+      "code": "https://github.com/brittanyleigh/ryp",
+      "live": "http://r-y-p.org/"
     },
     {
       "image": "/baseball-react.jpg",
@@ -16,6 +16,14 @@
       "description": "React & Redux web app for tracking your favorite MLB team's game details, standings, player stats, and recent news.",
       "code": "https://github.com/brittanyleigh/baseball-react",
       "live": "http://baseball.brittanyisenberg.com/"
+    },
+    {
+      "image": "/habits.jpg",
+      "alt": "django habits app screenshot",
+      "title": "Essentials Habit Tracker",
+      "description": "Django web app for developing healthy, positive habits by tracking daily streaks for three personalized 'essentials'.",
+      "code": "https://github.com/brittanyleigh/habits",
+      "live": "http://brittanyleigh.pythonanywhere.com/"
     }
   ]
 }
