@@ -25,5 +25,24 @@
       "code": "https://github.com/brittanyleigh/ryp",
       "live": "http://r-y-p.org/"
     }
+  ],
+  "places": [
+    {
+      "place": "Charlotte, NC"
+    },
+    {
+      "place": "Rochester, NY"
+    },
+    {
+      "place": "Greenville, SC"
+    }
+  ],
+  "facts": [
+    {
+      "fact": "Dark chocolate addict. Smoothie drinker."
+    },
+    {
+      "fact": "Dog lover. Shelter dog adopter."
+    }
   ]
 }
