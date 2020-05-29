@@ -3,47 +3,65 @@ label: homepage
 hide_body: true
 display_field: title
 fields:
-- type: text
-  name: title
-  default: ''
-  label: Title
-  hidden: false
-- type: field_group_list
-  name: projects
-  label: Projects
-  fields:
-  - name: image
-    type: file
-    config:
-      maxSize: 64
-      required: true
-    label: Image
-  - type: text
-    name: alt
-    label: Alt Text
-    config:
-      required: true
   - type: text
     name: title
+    default: ""
     label: Title
+    hidden: false
+  - type: field_group_list
+    name: projects
+    label: Projects
+    fields:
+      - name: image
+        type: file
+        config:
+          maxSize: 64
+          required: true
+        label: Image
+      - type: text
+        name: alt
+        label: Alt Text
+        config:
+          required: true
+      - type: text
+        name: title
+        label: Title
+        config:
+          required: true
+      - type: textarea
+        name: description
+        label: Description
+        config:
+          required: true
+      - type: text
+        name: code
+        label: Code Link
+        config:
+          required: true
+      - type: text
+        name: live
+        label: Live Link
+        config:
+          required: true
+  - type: field_group_list
+    name: places
+    label: About Me - Places
+    fields:
+      - type: text
+        name: place
+        label: Place
+        config:
+          required: true
+  - type: field_group_list
+    name: facts
+    label: About Me - Facts
+    fields:
+      - type: text
+        name: fact
+        label: Fact
+        config:
+          required: true
     config:
-      required: true
-  - type: textarea
-    name: description
-    label: Description
-    config:
-      required: true
-  - type: text
-    name: code
-    label: Code Link
-    config:
-      required: true
-  - type: text
-    name: live
-    label: Live Link
-    config:
-      required: true
-  config:
-    labelField: title
+      labelField: title
 pages:
-- content/homepage.json
+  - content/homepage.json
