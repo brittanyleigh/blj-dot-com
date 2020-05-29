@@ -10,7 +10,7 @@ sections:
   create: documents
   match: "**/*"
   new_doc_ext: json
-upload_dir: static/media
+upload_dir: src/images
 public_path: "/static/media"
 front_matter_path: ''
 use_front_matter_path: false
