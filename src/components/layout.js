@@ -23,14 +23,23 @@ const Layout = ({ children }) => {
     }
   `)
 
+  // TODO: style copyright
   return (
     <div className="container">
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <footer>
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <div class="desk">
+          <img
+            src={require("../images/desk.png")}
+            alt="desktop scene with laptop and notebook"
+          />
+        </div>
+        <div className="copyright">
+          © {new Date().getFullYear()} Brittany Isenberg, Built with
+          {` `}
+          <a href="https://www.gatsbyjs.org">Gatsby</a> and Forestry
+        </div>
       </footer>
     </div>
   )

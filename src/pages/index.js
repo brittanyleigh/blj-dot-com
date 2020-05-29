@@ -24,7 +24,7 @@ const IndexPage = () => (
       })}
     </div>
     <div class="secondary grid grid--halves">
-      <About />
+      <About places={data.places} facts={data.facts} />
       <div class="secondary__section" id="contact">
         <h2 class="secondary__heading">Get In Touch</h2>
         <form
@@ -63,12 +63,6 @@ const IndexPage = () => (
           />
         </form>
       </div>
-    </div>
-    <div class="desk">
-      <img
-        src={require("../images/desk.png")}
-        alt="desktop scene with laptop and notebook"
-      />
     </div>
   </Layout>
 )
