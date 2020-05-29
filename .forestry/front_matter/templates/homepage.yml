@@ -2,47 +2,45 @@
 label: homepage
 hide_body: false
 fields:
+- type: text
+  name: title
+  default: ''
+  label: Title
+  hidden: false
+- type: field_group_list
+  name: projects
+  label: Projects
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+      required: true
+    label: Image
+  - type: text
+    name: alt
+    label: Alt Text
+    config:
+      required: true
   - type: text
     name: title
-    default: ""
     label: Title
-    hidden: false
-  - type: field_group_list
-    name: projects
-    label: Projects
-    fields:
-      - name: image
-        type: file
-        config:
-          maxSize: 64
-          required: true
-        label: Image
-      - type: text
-        name: alt
-        label: Alt Text
-        config:
-          required: true
-      - type: text
-        name: title
-        label: Title
-        config:
-          required: true
-      - type: textarea
-        name: description
-        label: Description
-        config:
-          required: true
-      - type: text
-        name: code
-        label: Code Link
-        config:
-          required: true
-      - type: text
-        name: live
-        label: Live Link
-        config:
-          required: true
     config:
-      labelField: label
-pages:
-  - content/homepage-1.json
+      required: true
+  - type: textarea
+    name: description
+    label: Description
+    config:
+      required: true
+  - type: text
+    name: code
+    label: Code Link
+    config:
+      required: true
+  - type: text
+    name: live
+    label: Live Link
+    config:
+      required: true
+  config:
+    labelField: label
