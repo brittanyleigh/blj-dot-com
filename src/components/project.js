@@ -7,7 +7,7 @@ import { FaCode, FaExternalLinkAlt } from "react-icons/fa"
 const Project = props => (
   <div className="project grid">
     <div className="project__img project--bottom-auto">
-      <Image filename={props.image} alt={props.alt} />
+      <Image filename={props.image.replace("/", "")} alt={props.alt} />
     </div>
     <div className="project--bottom-auto">
       <h3 className="project__heading">{props.title}</h3>
