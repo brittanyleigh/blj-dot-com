@@ -1,8 +1,10 @@
+const metaData = require("./content/metaData.json")
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: metaData.title,
+    description: metaData.description,
+    author: metaData.author,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

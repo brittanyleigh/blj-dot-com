@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -23,13 +16,12 @@ const Layout = ({ children }) => {
     }
   `)
 
-  // TODO: style copyright
   return (
     <div className="container">
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
       <footer>
-        <div class="desk">
+        <div className="desk">
           <img
             src={require("../images/desk.png")}
             alt="desktop scene with laptop and notebook"

@@ -3,9 +3,9 @@ import React from "react"
 import { FaCaretRight, FaArrowRight } from "react-icons/fa"
 
 const About = props => (
-  <div class="secondary__section" id="about">
-    <h2 class="secondary__heading">About Me</h2>
-    <p class="secondary__p">
+  <div className="secondary__section" id="about">
+    <h2 className="secondary__heading">About Me</h2>
+    <p className="secondary__p">
       {props.places.map((item, index) => {
         return (
           <span>
@@ -21,7 +21,7 @@ const About = props => (
     </p>
     {props.facts.map(item => {
       return (
-        <p class="secondary__p">
+        <p className="secondary__p">
           <FaCaretRight className="secondary__i" /> {item.fact}
         </p>
       )
