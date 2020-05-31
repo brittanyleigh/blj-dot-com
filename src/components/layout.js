@@ -36,9 +36,15 @@ const Layout = ({ children }) => {
           />
         </div>
         <div className="copyright">
-          © {new Date().getFullYear()} Brittany Isenberg, Built with
+          © {new Date().getFullYear()} Brittany Isenberg || Built with
           {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a> and Forestry
+          <a className="copyright__a" href="https://www.gatsbyjs.org">
+            Gatsby
+          </a>{" "}
+          and{" "}
+          <a href="https://forestry.io/" className="copyright__a">
+            Forestry CMS
+          </a>
         </div>
       </footer>
     </div>

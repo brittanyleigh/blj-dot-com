@@ -377,3 +377,19 @@ p {
     }
   }
 }
+
+.copyright {
+  font-family: $mainFont;
+  margin-top: -4px;
+  background: #938577;
+  color: #d1cbc4;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.85rem;
+  &__a {
+    color: white;
+    &:hover {
+      font-style: italic;
+    }
+  }
+}
