@@ -17,6 +17,10 @@ $breakpoint-sm: 575px;
 $breakpoint-md: 650px;
 $breakpoint-lg: 950px;
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
 }
@@ -43,7 +47,7 @@ h1 {
 h2 {
   text-align: center;
   font-family: $titleFont;
-  letter-spacing: 1;
+  letter-spacing: 1px;
   color: $contrastColor;
   font-weight: 100;
 }
@@ -91,7 +95,7 @@ p {
 
 .title {
   &__sub {
-    letter-spacing: 1.2;
+    letter-spacing: 1.2px;
     text-transform: uppercase;
     font-size: 12px;
     padding-top: 3px;
@@ -115,6 +119,7 @@ p {
   border: solid 1px $lightGray;
   padding: 10px;
   border-radius: 50px;
+  display: flex;
 
   @media screen and (max-width: $breakpoint-sm) {
     width: 100%;
@@ -126,6 +131,7 @@ p {
     margin: 0px 5px;
     -webkit-transition: color 0.75s;
     transition: color 0.75s;
+    display: flex;
 
     &:hover,
     &:focus {
@@ -214,7 +220,7 @@ p {
     padding: 15px 10px;
     text-align: center;
     color: $contrastColor;
-    letter-spacing: 1.5;
+    letter-spacing: 1.5px;
     font-family: "Satisfy", cursive;
   }
   &__description {
@@ -273,7 +279,7 @@ p {
   grid-gap: 50px;
 
   &__heading {
-    letter-spacing: 1;
+    letter-spacing: 1px;
     padding-bottom: 5px;
     font-family: $titleFont;
     position: relative;
@@ -306,18 +312,35 @@ p {
   }
   &__i {
     color: $button-background;
+    vertical-align: text-top;
+    margin-top: 1px;
+    margin-left: 5px;
   }
   &__form {
-    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+
+    &__hr {
+      width: 100%;
+      border: solid 1px transparent;
+      margin: 0;
+    }
+
+    &__button {
+      margin: 0 auto;
+    }
   }
   &__input {
     padding: 5px;
-    margin-bottom: 10px;
+    margin: 0px 10px 10px 10px;
     border: solid 1px $lightGray;
     font-family: "raleway";
     font-size: 16px;
     color: $mainColor;
-    border-radius: 1000px;
+    border-radius: 15px;
+    flex-grow: 1;
 
     &--large {
       width: 70.25%;
