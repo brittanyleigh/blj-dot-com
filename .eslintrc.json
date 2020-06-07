@@ -66,7 +66,6 @@
     "no-new-require": 1,
     "no-path-concat": 1,
     "no-var": 1,
-    "arrow-parens": 1,
     "no-duplicate-imports": 1,
     "no-useless-computed-key": 1,
     "no-useless-constructor": 1,

@@ -42,7 +42,8 @@
     "forestry:preview": "gatsby develop -p 8080 -H 0.0.0.0",
     "admin": "gatsby build && gatsby serve",
     "lint": "eslint src --ext jsx --ext js",
-    "lint:fix": "eslint --fix src --ext jsx --ext js"
+    "lint:fix": "eslint --fix src --ext jsx --ext js",
+    "prettier": "prettier --write src/**/*.js *.js"
   },
   "repository": {
     "type": "git",

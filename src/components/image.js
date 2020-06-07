@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 
-const Image = (props) => (
+const Image = props => (
   <StaticQuery
     query={graphql`
       query {
@@ -22,8 +22,8 @@ const Image = (props) => (
         }
       }
     `}
-    render={(data) => {
-      const image = data.images.edges.find((n) => {
+    render={data => {
+      const image = data.images.edges.find(n => {
         return n.node.relativePath.includes(props.filename)
       })
       if (!image) {
