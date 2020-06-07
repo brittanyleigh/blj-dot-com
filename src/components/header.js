@@ -1,4 +1,3 @@
-import PropTypes from "prop-types"
 import React from "react"
 import {
   FaUserCircle,
@@ -7,7 +6,7 @@ import {
   FaGithub,
 } from "react-icons/fa"
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <header role="banner" className="header">
     <div className="title">
       <h1 className="title__h1">Brittany Isenberg</h1>
@@ -41,13 +40,5 @@ const Header = ({ siteTitle }) => (
     </nav>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

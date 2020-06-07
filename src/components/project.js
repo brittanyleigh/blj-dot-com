@@ -4,7 +4,7 @@ import Image from "./image"
 
 import { FaCode, FaExternalLinkAlt } from "react-icons/fa"
 
-const Project = props => (
+const Project = (props) => (
   <div className="project grid">
     <div className="project__img project--bottom-auto">
       <Image filename={props.image.replace("/", "")} alt={props.alt} />
@@ -41,6 +41,7 @@ Project.propTypes = {
   description: PropTypes.string.isRequired,
   code: PropTypes.string.isRequired,
   live: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 }
 
 export default Project

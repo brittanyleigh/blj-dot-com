@@ -1,3 +1,5 @@
+/* eslint-disable global-require */
+/* eslint-disable no-undef */
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"

@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <div className="grid grid--thirds grid--50">
-      {data.projects.map(item => {
+      {data.projects.map((item) => {
         return (
           <Project
             key={item.image}
