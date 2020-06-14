@@ -17,6 +17,9 @@ $breakpoint-sm: 575px;
 $breakpoint-md: 650px;
 $breakpoint-lg: 950px;
 
+$mildBorder: 20px;
+$roundedBorder: 50px;
+
 * {
   box-sizing: border-box;
 }
@@ -61,6 +64,11 @@ p {
   font-weight: 600;
 }
 
+main {
+  flex-grow: 1;
+  position: relative;
+}
+
 .container {
   margin: 0px;
   overflow-x: hidden;
@@ -69,6 +77,9 @@ p {
     $background-top 0%,
     $background-bottom 100%
   );
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
@@ -104,7 +115,7 @@ p {
     border: solid 1px $lightGray;
     color: $button-background;
     padding: 5px 10px;
-    border-radius: 50px;
+    border-radius: $roundedBorder;
     text-align: center;
     font-weight: bold;
   }
@@ -118,7 +129,7 @@ p {
   background: $light;
   border: solid 1px $lightGray;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: $roundedBorder;
   display: flex;
 
   @media screen and (max-width: $breakpoint-sm) {
@@ -194,13 +205,17 @@ p {
     -ms-flex-direction: column;
     flex-direction: column;
   }
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .project {
   border: solid 1px $lightGray;
   overflow: hidden;
   position: relative;
-  border-radius: 20px;
+  border-radius: $mildBorder;
   -webkit-box-shadow: 5px 5px 25px 0px #afc6da;
   box-shadow: 5px 5px 25px 0px #afc6da;
   background: $light;
@@ -220,7 +235,6 @@ p {
     padding: 15px 10px;
     text-align: center;
     color: $contrastColor;
-    letter-spacing: 1.5px;
     font-family: "Satisfy", cursive;
   }
   &__description {
@@ -236,9 +250,10 @@ p {
     justify-content: center;
     -webkit-box-align: end;
     -ms-flex-align: end;
-    align-items: flex-end;
+    align-items: flex-start;
     font-weight: 400;
     font-size: 14px;
+    min-height: 60px;
   }
   &__buttons {
     padding: 15px 10px;
@@ -264,6 +279,7 @@ p {
   letter-spacing: 1px;
   border: 0px;
   min-width: 100px;
+  text-align: center;
   &:hover,
   &:focus {
     cursor: pointer;
@@ -339,7 +355,7 @@ p {
     font-family: "raleway";
     font-size: 16px;
     color: $mainColor;
-    border-radius: 15px;
+    border-radius: $mildBorder;
     flex-grow: 1;
 
     &--large {
@@ -362,7 +378,7 @@ p {
     }
   }
   &__textarea {
-    border-radius: 15px;
+    border-radius: $mildBorder;
   }
 }
 
@@ -392,4 +408,11 @@ p {
       font-style: italic;
     }
   }
+}
+
+.box {
+  background: white;
+  padding: 30px;
+  border: solid 1px $lightGray;
+  border-radius: $mildBorder;
 }
