@@ -3,31 +3,31 @@ label: metaData
 hide_body: true
 display_field: title
 fields:
-  - type: text
-    name: display_name
-    label: CMS Display Name
-    config:
-      required: true
-  - type: text
-    name: title
-    label: Title
-    config:
-      required: true
-  - type: textarea
-    name: description
-    label: Description
-    config:
-      required: true
-  - type: text
-    name: author
-    label: Author
-    config:
-      required: true
-  - name: Favicon
-    type: file
-    config:
-      maxSize: 64
-      required: true
-    label: Favicon
+- type: text
+  name: display_name
+  label: CMS Display Name
+  config:
+    required: true
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: textarea
+  name: description
+  label: Description
+  config:
+    required: true
+- type: text
+  name: author
+  label: Author
+  config:
+    required: true
+- name: Favicon
+  type: file
+  config:
+    maxSize: 64
+    required: true
+  label: Favicon
 pages:
-  - content/metaData.json
+- content/metaData.json
