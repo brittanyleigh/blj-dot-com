@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.scss"
+import "../styles/styles.scss"
 
 const Layout = ({ children, flex }) => {
   const data = useStaticQuery(graphql`
@@ -49,6 +49,7 @@ const Layout = ({ children, flex }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  flex: PropTypes.bool,
 }
 
 export default Layout
