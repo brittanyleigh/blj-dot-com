@@ -4,8 +4,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
-import "../styles/styles.scss"
+import "../styles/index.scss"
 
 const Layout = ({ children, flex }) => {
   const data = useStaticQuery(graphql`
@@ -20,7 +19,6 @@ const Layout = ({ children, flex }) => {
 
   return (
     <div className="container">
-      <Header siteTitle={data.site.siteMetadata.title} />
       <main className={flex && "flex flex--center flex--column"}>
         {children}
       </main>

@@ -30,7 +30,12 @@ module.exports = {
         icon: `src/images${metaData.favicon}`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        postCssPlugins: [require("tailwindcss")],
+      },
+    },
     {
       resolve: "gatsby-plugin-prettier-eslint",
       options: {
@@ -52,6 +57,14 @@ module.exports = {
             cache: true,
           },
         },
+      },
+    },
+    {
+      resolve: "gatsby-source-etsy",
+      options: {
+        apiKey: null,
+        shopId: "brittanyleighjewelry",
+        language: "en",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
