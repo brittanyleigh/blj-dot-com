@@ -2,20 +2,12 @@
 /* eslint-disable no-undef */
 import React from "react"
 import PropTypes from "prop-types"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 
-const Header = ({ location = {} }) => {
-  const pages = useStaticQuery(graphql`
-    query GetPages {
-      allSitePage(filter: { path: { regex: "/^((?!404).)*$/" } }) {
-        distinct(field: path)
-      }
-    }
-  `)
-
+const Header = ({ location = {}, pages }) => {
   const links = []
   const { pathname } = location
-  pages.allSitePage.distinct.map(page => {
+  pages.map(page => {
     const link = page.replace(/\//g, "")
     links.push(
       <Link key={page} to={page}>
@@ -33,10 +25,10 @@ const Header = ({ location = {} }) => {
   return (
     <header className="bg-white border-b">
       <div className="flex justify-between items-center container m-auto">
-        <div className="max-w-sm p-5">
+        <div className="max-w-xs p-5">
           <Link className="" to="/">
             <img
-              className="max-w-sm"
+              className="max-w-xs"
               src={require("../images/blj-logo.png")}
               alt="brittany leigh jewelry logo"
             />
@@ -52,7 +44,8 @@ const Header = ({ location = {} }) => {
 }
 
 Header.propTypes = {
-  location: PropTypes.object.isRequired,
+  location: PropTypes.object,
+  pages: PropTypes.array.isRequired,
 }
 
 export default Header

@@ -17,20 +17,26 @@ const Layout = ({ children, location }) => {
           title
         }
       }
+      allSitePage(filter: { path: { regex: "/^((?!404).)*$/" } }) {
+        distinct(field: path)
+      }
     }
   `)
 
+  const pages = data.allSitePage.distinct
+
   return (
     <div className="texture-bg min-h-screen flex flex-col">
-      <Header location={location} />
+      <Header location={location} pages={pages} />
       <main className="container m-auto">{children}</main>
-      <Footer />
+      <Footer pages={pages} />
     </div>
   )
 }
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.object.isRequired,
 }
 
 export default Layout
