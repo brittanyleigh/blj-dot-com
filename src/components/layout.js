@@ -9,7 +9,7 @@ import Header from "./header"
 
 import "../styles/index.scss"
 
-const Layout = ({ children, flex }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -21,11 +21,9 @@ const Layout = ({ children, flex }) => {
   `)
 
   return (
-    <div className="texture-bg min-h-screen">
-      <Header />
-      <main className={flex && "flex flex--center flex--column"}>
-        {children}
-      </main>
+    <div className="texture-bg min-h-screen flex flex-col">
+      <Header location={location} />
+      <main className="container m-auto">{children}</main>
       <Footer />
     </div>
   )
@@ -33,7 +31,6 @@ const Layout = ({ children, flex }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  flex: PropTypes.bool,
 }
 
 export default Layout

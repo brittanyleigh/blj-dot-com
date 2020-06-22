@@ -3,7 +3,6 @@ const metaData = require("./content/metaData.json")
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
-console.log(process.env.ETSY_API_KEY)
 module.exports = {
   siteMetadata: {
     title: metaData.title,
@@ -36,7 +35,10 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sass`,
       options: {
-        postCssPlugins: [require("tailwindcss")],
+        postCssPlugins: [
+          require("tailwindcss"),
+          require("./tailwind.config.js"),
+        ],
       },
     },
     {

@@ -1,9 +1,10 @@
 /* eslint-disable global-require */
 /* eslint-disable no-undef */
 import React from "react"
+import PropTypes from "prop-types"
 import { Link, useStaticQuery, graphql } from "gatsby"
 
-const Header = () => {
+const Header = ({ location = {} }) => {
   const pages = useStaticQuery(graphql`
     query GetPages {
       allSitePage(filter: { path: { regex: "/^((?!404).)*$/" } }) {
@@ -13,21 +14,29 @@ const Header = () => {
   `)
 
   const links = []
+  const { pathname } = location
   pages.allSitePage.distinct.map(page => {
     const link = page.replace(/\//g, "")
     links.push(
       <Link key={page} to={page}>
-        <li className="uppercase p-3">{link || "Home"}</li>
+        <li
+          className={`uppercase p-3 tracking-wider hover:text-brand ${
+            pathname === page && "text-brand"
+          }`}
+        >
+          {link || "Home"}
+        </li>
       </Link>
     )
   })
 
   return (
-    <header>
-      <div className="flex justify-between items-center">
-        <div className="max-w-md p-5">
+    <header className="bg-white border-b">
+      <div className="flex justify-between items-center container m-auto">
+        <div className="max-w-sm p-5">
           <Link className="" to="/">
             <img
+              className="max-w-sm"
               src={require("../images/blj-logo.png")}
               alt="brittany leigh jewelry logo"
             />
@@ -40,6 +49,10 @@ const Header = () => {
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  location: PropTypes.object.isRequired,
 }
 
 export default Header

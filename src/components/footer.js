@@ -2,8 +2,8 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="copyright">
+    <footer className="bg-brand">
+      <div className="container m-auto">
         © {new Date().getFullYear()} Brittany Leigh Jewelry ||{" "}
         <a className="copyright__a" href="https://www.brittanyisenberg.com">
           Brittany Isenberg
