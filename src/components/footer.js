@@ -49,11 +49,11 @@ const Footer = ({ pages }) => {
 
   return (
     <footer className="bg-brand">
-      <div className="container m-auto">
+      <div className="container m-auto mb-20 sm:mb-0 border-b sm:border-b-0 border-brand-dark">
         <div className="flex justify-center text-2xl p-3 text-gray-900">
           {socialLinks}
         </div>
-        <div>
+        <div className="hidden sm:block">
           <ul className="flex justify-center text-xs">{links}</ul>
         </div>
         <div className="text-sm text-center p-2">
