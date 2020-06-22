@@ -9,6 +9,7 @@ import {
   FaQuestionCircle,
   FaStar,
   FaFemale,
+  FaLink,
 } from "react-icons/fa"
 
 const Header = ({ location = {}, pages }) => {
@@ -19,7 +20,7 @@ const Header = ({ location = {}, pages }) => {
     links.push(
       <Link key={page} to={page}>
         <li
-          className={`uppercase p-3 tracking-wider hover:text-brand ${
+          className={`uppercase p-3 tracking-wider hover:text-brand text-sm ${
             pathname === page && "text-brand"
           }`}
         >
@@ -36,15 +37,16 @@ const Header = ({ location = {}, pages }) => {
     contact: <FaPaperPlane />,
     faq: <FaQuestionCircle />,
     reviews: <FaStar />,
+    default: <FaLink />,
   }
   pages.map(page => {
     const link = page.replace(/\//g, "")
     mobileLinks.push(
-      <li className="uppercase tracking-wider flex-grow">
-        <Link key={page} to={page}>
+      <li className="uppercase tracking-wider flex-grow" key={page}>
+        <Link to={page}>
           <div className="p-3 text-brand-dark text-center flex items-center flex-col">
             <span className="text-gray-900 text-2xl pb-2">
-              {icons[link] || icons.home}
+              {link === "" ? icons.home : icons[link] || icons.default}
             </span>
             <span className="text-xs">{link || "Home"}</span>
           </div>
@@ -56,7 +58,7 @@ const Header = ({ location = {}, pages }) => {
   return (
     <header className="bg-white border-b">
       <div className="flex justify-between items-center container m-auto">
-        <div className="max-w-xs p-5 m-auto">
+        <div className="max-w-xs p-5 m-auto sm:m-0">
           <Link className="" to="/">
             <img
               src={require("../images/blj-logo.png")}

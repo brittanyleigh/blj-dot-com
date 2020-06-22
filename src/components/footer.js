@@ -8,8 +8,8 @@ const Footer = ({ pages }) => {
   pages.map((page, index) => {
     const link = page.replace(/\//g, "")
     links.push(
-      <li className="uppercase tracking-wider py-2">
-        <Link key={page} to={page}>
+      <li className="uppercase tracking-wider py-2" key={page}>
+        <Link to={page}>
           {index !== 0 && "∙"}
           <span className="px-3 text-brand-dark hover:text-gray-900">
             {link || "Home"}
@@ -37,6 +37,7 @@ const Footer = ({ pages }) => {
   social.map(link => {
     socialLinks.push(
       <a
+        key={link.link}
         href={link.link}
         target="_blank"
         rel="noreferrer"
