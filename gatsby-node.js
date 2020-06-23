@@ -1,7 +1,21 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+/* eslint-disable no-undef */
+exports.createPages = async function ({ actions, graphql }) {
+  const { data } = await graphql(`
+    query {
+      allFeaturedEtsyListing {
+        nodes {
+          listing_id
+        }
+      }
+    }
+  `)
 
-// You can delete this file if you're not using it
+  data.allFeaturedEtsyListing.nodes.forEach(node => {
+    const slug = `shop/${node.listing_id}`
+    actions.createPage({
+      path: slug,
+      component: require.resolve(`./src/components/jewelry.js`),
+      context: { listing: node.listing_id },
+    })
+  })
+}

@@ -17,7 +17,7 @@ const Layout = ({ children, location }) => {
           title
         }
       }
-      allSitePage(filter: { path: { regex: "/^((?!404).)*$/" } }) {
+      allSitePage(filter: { path: { regex: "/^((?!404)(?!shop).)*$/" } }) {
         distinct(field: path)
       }
     }
@@ -36,7 +36,7 @@ const Layout = ({ children, location }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  location: PropTypes.object.isRequired,
+  location: PropTypes.object,
 }
 
 export default Layout
