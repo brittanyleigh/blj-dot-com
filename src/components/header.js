@@ -70,7 +70,7 @@ const Header = ({ location = {}, pages }) => {
         <nav className="hidden sm:block">
           <ul className="flex p-5">{links}</ul>
         </nav>
-        <nav className="absolute w-full bottom-0 bg-brand sm:hidden">
+        <nav className="fixed w-full bottom-0 bg-brand sm:hidden z-50">
           <ul className="flex justify-center items-center h-20">
             {mobileLinks}
           </ul>

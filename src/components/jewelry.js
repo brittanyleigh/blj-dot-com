@@ -5,7 +5,8 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "./layout"
 
-const Jewelry = () => {
+const Jewelry = props => {
+  console.log(props)
   const query = useStaticQuery(graphql`
     query getListing($listing: Int) {
       featuredEtsyListing(listing_id: { eq: $listing }) {
@@ -20,7 +21,7 @@ const Jewelry = () => {
       }
     }
   `)
-
+  console.log("featured listing")
   console.log(query.featuredEtsyListing)
 
   return (
