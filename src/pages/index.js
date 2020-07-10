@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Button from "../components/button"
 import data from "../../content/homepage.json"
 
 const IndexPage = props => {
@@ -25,8 +26,6 @@ const IndexPage = props => {
     }
   `)
 
-  console.log(data)
-
   return (
     <Layout location={props.location}>
       <SEO title="Home" />
@@ -47,14 +46,7 @@ const IndexPage = props => {
               <p className="py-1 tracking-wider border-b">{listing.title}</p>
               <p className="py-1 text-xl">${listing.price}</p>
               <div className="py-1">
-                <a
-                  target="_blank"
-                  rel="noreferrer"
-                  href={listing.url}
-                  className="py-3 px-10 tracking-widest bg-brand rounded-lg hover:bg-brand-dark hover:text-white transition ease-in duration-300 font-bold uppercase border-brand-dark border-2 border-t-0 border-l-0"
-                >
-                  Buy on ETSY
-                </a>
+                <Button link={listing.url} label="Buy on ETSY" />
               </div>
             </div>
           )
