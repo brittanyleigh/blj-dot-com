@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
-import { FaFacebookF, FaPinterestP, FaInstagram } from "react-icons/fa"
+import { FaFacebookF, FaPinterestP, FaInstagram, FaEtsy } from "react-icons/fa"
 
 const Footer = ({ pages }) => {
   const links = []
@@ -32,6 +32,10 @@ const Footer = ({ pages }) => {
     {
       link: "https://instagram.com/brittanyleighjewelry",
       icon: <FaInstagram />,
+    },
+    {
+      link: "https://www.etsy.com/shop/brittanyleighjewelry",
+      icon: <FaEtsy />,
     },
   ]
   social.map(link => {

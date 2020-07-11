@@ -4,7 +4,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Button from "../components/button"
+import EtsyButton from "../components/etsyButton"
 import ExternalLink from "../components/ExternalLink"
 const Entities = require("html-entities").AllHtmlEntities
 
@@ -32,9 +32,7 @@ const Jewelry = ({ data }) => {
   const details = listing.description.split("\n")
   const content = details.map(detail => {
     let detailItem
-    if (detail.indexOf("https:") === 0) {
-      detailItem = <ExternalLink link={detail} label="Click here" />
-    } else if (detail.indexOf("https:") > 0) {
+    if (detail.indexOf("https:") >= 0) {
       const detailPieces = detail.split(" ")
       detailItem = (
         <React.Fragment>
@@ -68,7 +66,7 @@ const Jewelry = ({ data }) => {
         </div>
 
         <div className="border-b border-t mb-3 py-6 text-center">
-          <Button link={listing.url} label="Buy on Etsy" />
+          <EtsyButton link={listing.url} />
         </div>
         <img
           className="border"
@@ -77,7 +75,7 @@ const Jewelry = ({ data }) => {
         />
         <div className="border-t my-3 py-3">{content}</div>
         <div className="text-center p-3">
-          <Button link={listing.url} label="Buy on Etsy" />
+          <EtsyButton link={listing.url} />
         </div>
       </div>
     </Layout>

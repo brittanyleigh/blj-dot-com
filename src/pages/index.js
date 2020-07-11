@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
+import EtsyButton from "../components/etsyButton"
 import data from "../../content/homepage.json"
 
 const IndexPage = props => {
@@ -46,7 +47,7 @@ const IndexPage = props => {
               <p className="py-1 tracking-wider border-b">{listing.title}</p>
               <p className="py-1 text-xl">${listing.price}</p>
               <div className="py-1">
-                <Button link={listing.url} label="Buy on ETSY" />
+                <EtsyButton link={listing.url} />
               </div>
             </div>
           )

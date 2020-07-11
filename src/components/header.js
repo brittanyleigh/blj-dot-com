@@ -11,6 +11,7 @@ import {
   FaFemale,
   FaLink,
 } from "react-icons/fa"
+import Etsy from "./etsy"
 
 const Header = ({ location = {}, pages }) => {
   const links = []
@@ -29,6 +30,17 @@ const Header = ({ location = {}, pages }) => {
       </Link>
     )
   })
+  links.push(
+    <a
+      href="https://www.etsy.com/shop/BrittanyLeighJewelry"
+      target="_blank"
+      rel="noreferrer"
+    >
+      <li className="uppercase p-3 tracking-wider hover:text-brand text-sm">
+        Shop on <Etsy />
+      </li>
+    </a>
+  )
 
   const mobileLinks = []
   const icons = {
@@ -57,7 +69,7 @@ const Header = ({ location = {}, pages }) => {
 
   return (
     <header className="bg-white border-b">
-      <div className="flex justify-between items-center container m-auto">
+      <div className="flex justify-between items-center container m-auto flex-column sm:flex-row flex-wrap sm:flex-no-wrap">
         <div className="max-w-xs p-5 m-auto sm:m-0">
           <Link className="" to="/">
             <img
@@ -67,8 +79,8 @@ const Header = ({ location = {}, pages }) => {
           </Link>
         </div>
 
-        <nav className="hidden sm:block">
-          <ul className="flex p-5">{links}</ul>
+        <nav className="hidden sm:block ml-auto">
+          <ul className="flex p-5 items-center">{links}</ul>
         </nav>
         <nav className="fixed w-full bottom-0 bg-brand sm:hidden z-50">
           <ul className="flex justify-center items-center h-20">
