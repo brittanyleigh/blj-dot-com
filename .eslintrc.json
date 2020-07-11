@@ -81,6 +81,7 @@
     "no-template-curly-in-string": 1,
     "require-atomic-updates": 1,
     "react-redux/prefer-separate-component-file": 0,
-    "react-redux/connect-prefer-named-arguments": 0
+    "react-redux/connect-prefer-named-arguments": 0,
+    "react/no-unescaped-entities": 0
   }
 }

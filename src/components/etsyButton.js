@@ -6,6 +6,7 @@ import Etsy from "./etsy"
 const EtsyButton = props => {
   return (
     <Button
+      external={true}
       link={props.link}
       label={
         <React.Fragment>
