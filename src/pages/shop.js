@@ -59,23 +59,26 @@ const Jewelry = ({ data }) => {
   return (
     <Layout>
       <div className="max-w-2xl mx-auto my-8 sm:my-16 px-6">
-        <div className="text-xl font-bold tracking-widest py-3 my-3 text-center">
-          <span className="uppercase">{listing.title}</span>
+        <div className="text-xl font-bold tracking-widest py-3 my-3 text-center border-b">
+          <span className="white-oleander tracking-normal text-4xl font-light">
+            {listing.title}
+          </span>
           <br />
           <span className="italic text-base">Starting at ${listing.price}</span>
-        </div>
-
-        <div className="border-b border-t mb-3 py-6 text-center">
-          <EtsyButton link={listing.url} />
         </div>
         <img
           className="border"
           src={images.nodes[0].url_fullxfull}
           alt={listing.title}
         />
-        <div className="border-t my-3 py-3">{content}</div>
-        <div className="text-center p-3">
-          <EtsyButton link={listing.url} />
+        <div className="py-3">
+          <div className="mb-3 py-6 text-center border-b border-t">
+            <EtsyButton link={listing.url} full={true} />
+          </div>
+          {content}
+        </div>
+        <div className="text-center py-3">
+          <EtsyButton link={listing.url} full={true} />
         </div>
       </div>
     </Layout>

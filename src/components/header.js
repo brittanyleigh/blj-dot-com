@@ -68,7 +68,7 @@ const Header = ({ location = {}, pages }) => {
   })
 
   return (
-    <header className="bg-white border-b">
+    <header className=" border-b texture-bg">
       <div className="flex justify-between items-center container m-auto flex-column sm:flex-row flex-wrap sm:flex-no-wrap">
         <div className="max-w-xs p-5 m-auto sm:m-0">
           <Link className="" to="/">

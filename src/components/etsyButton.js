@@ -8,6 +8,8 @@ const EtsyButton = props => {
     <Button
       external={true}
       link={props.link}
+      full={props.full}
+      color="light"
       label={
         <React.Fragment>
           Buy on <Etsy />
@@ -19,6 +21,7 @@ const EtsyButton = props => {
 
 EtsyButton.propTypes = {
   link: PropTypes.string.isRequired,
+  full: PropTypes.bool,
 }
 
 export default EtsyButton

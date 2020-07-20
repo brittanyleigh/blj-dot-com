@@ -19,6 +19,14 @@ $breakpoint-lg: 950px;
 $mildBorder: 20px;
 $roundedBorder: 50px;
 
+@font-face {
+  font-family: "white_oleander";
+  src: url("whiteoleander-webfont.woff2") format("woff2"),
+    url("whiteoleander-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   font-family: "Questrial", sans-serif;
@@ -51,6 +59,10 @@ main {
 }
 
 .landing-grid {
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
-  grid-gap: 3.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  grid-gap: 7rem;
+}
+
+.white-oleander {
+  font-family: "white_oleander";
 }
