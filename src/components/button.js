@@ -23,7 +23,7 @@ const Button = props => {
       colors =
         "border bg-brand border-brand-dark hover:bg-brand-dark hover:text-white"
   }
-  const classes = `py-3 px-8 text-sm tracking-widest transition ease-in duration-300 font-bold whitespace-no-wrap ${
+  const classes = `w-full sm:w-auto py-2 px-8 text-sm tracking-widest transition ease-in duration-300 font-bold whitespace-no-wrap ${
     props.full ? "block" : ""
   } ${colors}`
   return props.external ? (

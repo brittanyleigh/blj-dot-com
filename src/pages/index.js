@@ -37,7 +37,13 @@ const IndexPage = props => {
           )
           return (
             <div key={listing.listing_id} className="text-center flex flex-col">
-              <Link to={`/shop/${listing.listing_id}`}>
+              <Link
+                to={`/shop/${listing.listing_id}`}
+                className="relative product"
+              >
+                <div className="absolute w-full h-full flex items-center justify-center overlay text-4xl p-3 uppercase font-extrabold text-white tracking-widest text-brand">
+                  Learn More
+                </div>
                 <img
                   className="max-w-full h-auto"
                   src={listing_image[0].url_fullxfull}
@@ -46,18 +52,7 @@ const IndexPage = props => {
               </Link>
               <p className="py-3 tracking-wider border-t">{listing.title}</p>
               <div className="flex flex-col justify-between items-center mt-auto">
-                <div className="m-1">
-                  <Button
-                    link={`/shop/${listing.listing_id}`}
-                    label={
-                      <>
-                        Learn More <FaChevronRight className="inline-block" />
-                      </>
-                    }
-                    color="transparent"
-                  />
-                </div>
-                <div className="m-4">
+                <div className="mx-2 flex w-full justify-center">
                   <EtsyButton link={listing.url} />
                 </div>
               </div>

@@ -1,15 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 
-$titleFont: "Satisfy", cursive;
-$mainFont: "Raleway", sans-serif;
-$light: #ffffff;
-$mainColor: #9398a2;
-$contrastColor: #353535;
-$bodyColor: #5d5d5d;
-$lightGray: #dedede;
-$background-top: #e8faff;
-$background-bottom: #c1d9f1;
-$button-background: darken($background-bottom, 20%);
+$brand: #c29cad;
+$brand-dark: #905870;
+$brand-light: #ecd6e0;
+$brand-lightest: #f4ecf0;
 
 $breakpoint-xs: 400px;
 $breakpoint-sm: 575px;
@@ -65,4 +59,67 @@ main {
 
 .white-oleander {
   font-family: "white_oleander";
+}
+
+.product {
+  &:hover {
+    .overlay {
+      display: flex;
+    }
+  }
+}
+
+.overlay {
+  display: none;
+  //background: transparentize($brand, 0.25);
+  background: transparentize(#ffffff, 0.25);
+  animation: fadeIn ease 750ms;
+  -webkit-animation: fadeIn ease 750ms;
+  -moz-animation: fadeIn ease 750ms;
+  -o-animation: fadeIn ease 750ms;
+  -ms-animation: fadeIn ease 750ms;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
