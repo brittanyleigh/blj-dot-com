@@ -3,10 +3,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
 import EtsyButton from "../components/etsyButton"
-import data from "../../content/homepage.json"
-import { FaChevronRight } from "react-icons/fa"
 
 const IndexPage = props => {
   const data = useStaticQuery(graphql`
@@ -41,7 +38,7 @@ const IndexPage = props => {
                 to={`/shop/${listing.listing_id}`}
                 className="relative product"
               >
-                <div className="absolute w-full h-full flex items-center justify-center overlay text-4xl p-3 uppercase font-extrabold text-white tracking-widest text-brand">
+                <div className="absolute w-full h-full flex items-center justify-center overlay text-2xl p-3 uppercase font-extrabold text-white tracking-widest text-brand">
                   Learn More
                 </div>
                 <img
