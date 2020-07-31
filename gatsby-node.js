@@ -14,7 +14,7 @@ exports.createPages = async function ({ actions, graphql }) {
     const slug = `shop/${node.listing_id}`
     actions.createPage({
       path: slug,
-      component: require.resolve(`./src/pages/shop.js`),
+      component: require.resolve(`./src/components/shop.js`),
       context: { listing: node.listing_id },
     })
   })
