@@ -26,21 +26,42 @@ const Button = props => {
   const classes = `w-full sm:w-auto py-2 px-8 text-sm tracking-widest transition ease-in duration-300 font-bold whitespace-no-wrap ${
     props.full ? "block" : ""
   } ${colors}`
-  return props.external ? (
-    <a target="_blank" rel="noreferrer" href={props.link} className={classes}>
-      {props.label}
-    </a>
-  ) : (
-    <Link to={props.link} className={classes}>
-      {props.label}
-    </Link>
-  )
+
+  let button
+  switch (props.type) {
+    case "external":
+      button = (
+        <a
+          target="_blank"
+          rel="noreferrer"
+          href={props.link}
+          className={classes}
+        >
+          {props.label}
+        </a>
+      )
+      break
+    case "submit":
+      button = (
+        <button type="submit" className={classes}>
+          <span className="flex items-center">{props.label}</span>
+        </button>
+      )
+      break
+    default:
+      button = (
+        <Link to={props.link} className={classes}>
+          {props.label}
+        </Link>
+      )
+  }
+  return button
 }
 
 Button.propTypes = {
-  link: PropTypes.string.isRequired,
+  link: PropTypes.string,
   label: PropTypes.string.isRequired,
-  external: PropTypes.bool,
+  type: PropTypes.string,
   full: PropTypes.bool,
   color: PropTypes.string.isRequired,
 }

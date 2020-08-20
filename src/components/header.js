@@ -21,7 +21,7 @@ const Header = ({ location = {}, pages }) => {
     links.push(
       <Link key={page} to={page}>
         <li
-          className={`uppercase p-3 tracking-wider hover:text-brand text-sm ${
+          className={`uppercase p-3 tracking-wider hover:text-brand text-sm text-center ${
             pathname === page && "text-brand"
           }`}
         >
@@ -36,7 +36,7 @@ const Header = ({ location = {}, pages }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <li className="uppercase p-3 tracking-wider hover:text-brand text-sm">
+      <li className="uppercase p-3 tracking-wider hover:text-brand text-sm text-center">
         Shop on <Etsy />
       </li>
     </a>

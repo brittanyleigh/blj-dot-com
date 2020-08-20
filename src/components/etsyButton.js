@@ -6,7 +6,7 @@ import Etsy from "./etsy"
 const EtsyButton = props => {
   return (
     <Button
-      external={true}
+      type="external"
       link={props.link}
       full={props.full}
       color="light"

@@ -6,6 +6,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Footer from "./footer"
 import Header from "./header"
+import Newsletter from "./newsletter"
 
 import "../styles/index.scss"
 
@@ -29,6 +30,7 @@ const Layout = ({ children, location }) => {
     <div className="min-h-screen flex flex-col">
       <Header location={location} pages={pages} />
       <main className="container m-auto">{children}</main>
+      <Newsletter />
       <Footer pages={pages} />
     </div>
   )
