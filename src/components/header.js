@@ -35,6 +35,7 @@ const Header = ({ location = {}, pages }) => {
       href="https://www.etsy.com/shop/BrittanyLeighJewelry"
       target="_blank"
       rel="noreferrer"
+      key="etsy"
     >
       <li className="uppercase p-3 tracking-wider hover:text-brand text-sm text-center">
         Shop on <Etsy />

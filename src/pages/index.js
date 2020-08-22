@@ -4,6 +4,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import EtsyButton from "../components/etsyButton"
+import PageHeading from "../components/pageHeading"
 
 const IndexPage = props => {
   const data = useStaticQuery(graphql`
@@ -27,6 +28,10 @@ const IndexPage = props => {
   return (
     <Layout location={props.location}>
       <SEO title="Home" />
+      <PageHeading
+        heading="Personalized Handwriting Jewelry"
+        subheading="Handmade with love in sterling silver and 14k gold"
+      />
       <div className="landing-grid grid my-8 sm:my-16 p-3">
         {data.listings.nodes.map(listing => {
           const listing_image = data.images.nodes.filter(

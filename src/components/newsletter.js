@@ -57,7 +57,7 @@ const Newsletter = () => {
   return (
     <div className="texture-bg flex justify-center items-center border-t border-b p-12">
       <form className="container m-auto text-center" onSubmit={handleSubmit}>
-        <p className="text-5xl white-oleander">
+        <p className="text-3xl sm:text-5xl white-oleander text-brand-charcoal">
           Sign up to get 10% off your first order!
         </p>
         {!success && inputs}

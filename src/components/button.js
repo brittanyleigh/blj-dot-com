@@ -60,7 +60,10 @@ const Button = props => {
 
 Button.propTypes = {
   link: PropTypes.string,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.object.isRequired,
+  ]),
   type: PropTypes.string,
   full: PropTypes.bool,
   color: PropTypes.string.isRequired,
