@@ -31,6 +31,7 @@ const IndexPage = props => {
       <PageHeading
         heading="Personalized Handwriting Jewelry"
         subheading="Handmade with love in sterling silver and 14k gold"
+        extraClass="mx-3"
       />
       <div className="landing-grid grid my-8 sm:my-16 p-3">
         {data.listings.nodes.map(listing => {
