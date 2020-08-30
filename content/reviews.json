@@ -1,0 +1,14 @@
+{
+  "heading": "Reviews",
+  "subheading": "something",
+  "reviews": [
+    {
+      "question": "doggo ipsum blah blah blah doggo ipsum blah blah blah doggo ipsum blah blah blah",
+      "answer": "something something doggo corgo something something doggo corgo something something doggo corgo something something doggo corgo something something doggo corgo"
+    },
+    {
+      "question": "doggo ipsum blah blah blah doggo ipsum blah blah blah doggo ipsum blah blah blah",
+      "answer": "something something doggo corgo something something doggo corgo something something doggo corgo something something doggo corgo something something doggo corgo"
+    }
+  ]
+}
