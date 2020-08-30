@@ -19,6 +19,8 @@ sections:
   match: "**/*"
   new_doc_ext: json
   templates:
+  - faqs
+  - reviews-page
   - page
 upload_dir: src/images
 public_path: ''
