@@ -1,0 +1,32 @@
+---
+label: FAQs Page
+hide_body: true
+display_field: heading
+fields:
+- name: headings
+  type: include
+  config: {}
+  template: page-heading
+  label: Headings
+- name: faqs
+  type: field_group_list
+  fields:
+  - name: question
+    type: text
+    config:
+      required: false
+    label: Question
+  - name: answer
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: true
+      schema:
+        format: html-blocks
+    label: Answer
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: FAQs

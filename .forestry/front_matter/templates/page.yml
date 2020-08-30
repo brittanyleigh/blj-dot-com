@@ -1,0 +1,29 @@
+---
+label: Basic Page
+hide_body: true
+display_field: heading
+fields:
+- name: headings
+  type: include
+  config: {}
+  template: page-heading
+  label: Headings
+- name: has_body_copy
+  type: boolean
+  label: Has Body Copy
+- name: page_body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Page Body
+  showOnly:
+    field: has_body_copy
+    value: true
+pages:
+- content/About.json
+- content/contact.json
+- content/homepage.json
