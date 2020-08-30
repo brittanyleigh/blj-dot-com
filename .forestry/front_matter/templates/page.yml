@@ -18,4 +18,5 @@ fields:
       format: html-blocks
   label: Page Body
 pages:
+- content/About.json
 - content/homepage.json
