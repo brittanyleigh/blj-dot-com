@@ -1,4 +1,18 @@
 ---
-label: Page
+label: Basic Page
 hide_body: true
-fields: []
+fields:
+- name: headings
+  type: include
+  config: {}
+  template: page-heading
+  label: Headings
+- name: page_body
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: html-blocks
+  label: Page Body
