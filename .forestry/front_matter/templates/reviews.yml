@@ -1,6 +1,7 @@
 ---
-label: Reviews
+label: Review
 hide_body: true
+display_field: review_text
 fields:
 - name: review_image
   type: file
