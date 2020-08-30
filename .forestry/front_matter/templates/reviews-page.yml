@@ -10,11 +10,20 @@ fields:
 - name: reviews
   type: field_group_list
   fields:
-  - name: review
-    type: include
-    config: {}
-    template: reviews
-    label: Review
+  - name: review_image
+    type: file
+    config:
+      maxSize: 64
+    label: Review Image
+  - name: review_text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: Review Text
   config:
     min: 
     max: 
