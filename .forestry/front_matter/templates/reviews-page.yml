@@ -1,4 +1,22 @@
 ---
 label: Reviews Page
 hide_body: false
-fields: []
+fields:
+- name: headings
+  type: include
+  config: {}
+  template: page-heading
+  label: Headings
+- name: reviews
+  type: field_group_list
+  fields:
+  - name: review
+    type: include
+    config: {}
+    template: reviews
+    label: Review
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Reviews
