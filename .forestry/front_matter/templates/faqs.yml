@@ -1,6 +1,7 @@
 ---
 label: FAQs Page
 hide_body: true
+display_field: heading
 fields:
 - name: headings
   type: include
