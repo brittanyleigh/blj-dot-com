@@ -5,14 +5,6 @@ admin_path: "/static/admin"
 webhook_url: 
 sections:
 - type: directory
-  path: content/reviews
-  label: Reviews
-  create: documents
-  match: "**/*"
-  new_doc_ext: json
-  templates:
-  - reviews
-- type: directory
   path: content
   label: Pages
   create: documents
