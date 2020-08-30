@@ -19,4 +19,5 @@ fields:
   label: Page Body
 pages:
 - content/About.json
+- content/contact.json
 - content/homepage.json
