@@ -27,9 +27,10 @@ const Image = props => (
         return n.node.relativePath.includes(props.filename)
       })
       if (!image) {
+        console.log("no image")
         return null
       }
-
+      console.log(props.filename)
       //const imageSizes = image.node.childImageSharp.sizes; sizes={imageSizes}
       return <Img alt={props.alt} fluid={image.node.childImageSharp.fluid} />
     }}

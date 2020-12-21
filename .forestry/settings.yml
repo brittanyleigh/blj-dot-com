@@ -2,21 +2,21 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: "/static/admin"
-webhook_url: 
+webhook_url:
 sections:
-- type: directory
-  path: content
-  label: Pages
-  create: documents
-  match: "**/*"
-  new_doc_ext: json
-  templates:
-  - faqs
-  - reviews-page
-  - page
+  - type: directory
+    path: content
+    label: Pages
+    create: documents
+    match: "**/*"
+    new_doc_ext: json
+    templates:
+      - faqs
+      - reviews-page
+      - page
 upload_dir: src/images
-public_path: ''
-front_matter_path: ''
+public_path: ""
+front_matter_path: ""
 use_front_matter_path: false
 file_template: ":filename:"
 build:

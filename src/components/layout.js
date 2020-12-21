@@ -27,7 +27,7 @@ const Layout = ({ children, location }) => {
   const pages = data.allSitePage.distinct
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen  flex-col">
       <Header location={location} pages={pages} />
       <main className="container m-auto">{children}</main>
       <Newsletter />

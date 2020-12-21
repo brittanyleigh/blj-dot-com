@@ -4,14 +4,33 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import PageHeading from "../components/pageHeading"
 import data from "../../content/reviews.json"
+import Image from "../components/image"
+import Masonry from "react-masonry-component"
+
+const masonryOptions = {
+  transitionDuration: 0,
+}
 
 const ReviewsPage = props => {
+  const { reviews } = data
+  const gallery = []
+  for (const review of reviews) {
+    gallery.push(
+      <div>
+        <Image
+          filename={review.review_image.replace("/", "")}
+          alt={review.review_text}
+        />
+      </div>
+    )
+  }
+
   return (
     <Layout location={props.location}>
       <SEO title="Home" />
-      <div className="m-8 sm:m-auto max-w-xl sm:my-16">
+      <div className="m-8 sm:m-auto container sm:my-16">
         <PageHeading heading={data.heading} subheading={data.subheading} />
-        <div className="grid grid-reviews">{data.about}</div>
+        <Masonry>{gallery}</Masonry>
       </div>
     </Layout>
   )

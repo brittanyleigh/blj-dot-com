@@ -2,13 +2,13 @@
 label: Page Heading
 hide_body: true
 fields:
-- name: heading
-  type: text
-  config:
-    required: false
-  label: Heading
-- name: subheading
-  type: text
-  config:
-    required: false
-  label: Subheading
+  - name: heading
+    type: text
+    config:
+      required: false
+    label: Heading
+  - name: subheading
+    type: text
+    config:
+      required: false
+    label: Subheading
